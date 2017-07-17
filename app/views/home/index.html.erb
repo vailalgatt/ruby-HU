@@ -3,78 +3,20 @@
     <h4>This Q&A site is dedicated to questions about the history of Pilates</h4>
 </div>
 
-<div class="container-fluid">
-</div>
-<div class="media-left">
-    <a href="#">
-      <img class="media-object" src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-female-circle-pink-128.png" alt="...">
-    </a>
-</div>
-<div class="media-body">
-    <h4 class="media-heading">user@email.com</h4>
-    <p> Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut
-        jÃ­cama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea. Grape silver beet watercress
-        potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels
-        sprout groundnut summer purslane earthnut pea tomato spring onion azuki bean gourd. Gumbo kakadu plum komatsuna black-eyed
-        pea green bean zucchini gourd winter purslane silver beet rock melon radish asparagus spinach.</p>
-</div>
-<a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-</div>
-
-<div class="media">
-    <div class="media-left">
+<div class="container">
+  <% @questions.each do |q| %>
+    <div class="media">
+      <div class="media-left">
         <a href="#">
-      <img class="media-object" src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-female-circle-pink-128.png" alt="...">
-    </a>
+          <img class="media-object" src="<%= q.gravatar %>">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><%= q.email %> asked:</h4>
+        <div><%= time_ago_in_words q.created_at %> ago</div>
+        <div><%= q.body %></div>
+        <div><a href="<%= question_path(q) %>" class="btn btn-success btn-xs">View Answers</a></div>
+      </div>
     </div>
-    <div class="media-body">
-        <h4 class="media-heading">user@email.com</h4>
-        <p> Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard
-            tigernut jÃ­cama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea. Grape silver
-            beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper
-            radish garlic brussels sprout groundnut summer purslane earthnut pea tomato spring onion azuki bean gourd. Gumbo
-            kakadu plum komatsuna black-eyed pea green bean zucchini gourd winter purslane silver beet rock melon radish
-            asparagus spinach.</p>
-    </div>
-    <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-
-</div>
-
-<div class="media">
-    <div class="media-left">
-        <a href="#">
-      <img class="media-object" src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-female-circle-pink-128.png" alt="...">
-    </a>
-    </div>
-    <div class="media-body">
-        <h4 class="media-heading">user@email.com</h4>
-        <p> Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard
-            tigernut jÃ­cama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea. Grape silver
-            beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper
-            radish garlic brussels sprout groundnut summer purslane earthnut pea tomato spring onion azuki bean gourd. Gumbo
-            kakadu plum komatsuna black-eyed pea green bean zucchini gourd winter purslane silver beet rock melon radish
-            asparagus spinach.</p>
-    </div>
-    <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-
-</div>
-
-<div class="media">
-    <div class="media-left">
-        <a href="#">
-      <img class="media-object" src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-female-circle-pink-128.png" alt="...">
-    </a>
-    </div>
-    <div class="media-body">
-        <h4 class="media-heading">user@email.com</h4>
-        <p> Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard
-            tigernut jÃ­cama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea. Grape silver
-            beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper
-            radish garlic brussels sprout groundnut summer purslane earthnut pea tomato spring onion azuki bean gourd. Gumbo
-            kakadu plum komatsuna black-eyed pea green bean zucchini gourd winter purslane silver beet rock melon radish
-            asparagus spinach.</p>
-    </div>
-    <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-</div>
-
+  <% end %>
 </div>
