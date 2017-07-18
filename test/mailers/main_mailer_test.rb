@@ -11,8 +11,8 @@ class MainMailerTest < ActionMailer::TestCase
     mail = MainMailer.notify_question_author(answer)
     assert_equal "Notify question author", mail.subject
 
-    assert_equal ["to@example.org"], mail.to
-    assert_equal ["from@example.com"], mail.from
+    assert_equal [question.email], mail.to
+    assert_equal [answer.email], mail.from
     
     assert_match "Hi", mail.body.encoded
   end
