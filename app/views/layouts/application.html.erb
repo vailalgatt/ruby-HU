@@ -15,7 +15,6 @@
 
     <%= render 'home/navbar' %>
 
-    <div class="well"><%= session[:current_user_email] || 'No email has been saved yet' %></div>
     <%= yield %>
 
     <%= render 'home/new_question_form' %>
