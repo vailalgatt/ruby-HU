@@ -1,5 +1,5 @@
 <div class="well">
-    <h1>A deeper look into the origins of Pilates</h1>
+    <h1>A place to ask any Pilates related questions!</h1>
     <h4>This Q&amp;A site is dedicated to questions about the history of Pilates</h4>
 </div>
 
@@ -18,5 +18,10 @@
         <div><a href="<%= question_path(q) %>" class="btn btn-success btn-xs">View Answers</a></div>
       </div>
     </div>
+  <% end %>
+
+  <% if @questions.empty? %>
+  <div class="alert alter-info">Be the first to ask a question!</div> 
+
   <% end %>
 </div>
