@@ -14,7 +14,7 @@ class MainMailerTest < ActionMailer::TestCase
     assert_equal [question.email], mail.to
     assert_equal [answer.email], mail.from
     
-    assert_match "Hi", mail.body.encoded
+    assert_match answer.body, mail.body.encoded
   end
 
 end
