@@ -50,6 +50,10 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.boxes .btn:hover {
+  background: #3d746d;
+}
+
 .boxes .questionContent {
   font-family: 'Open Sans', sans-serif;
 }
@@ -94,4 +98,12 @@ p {
 
 .pilatesHeading {
   text-align: center;
+}
+
+.btn:hover {
+  background-color: #3d746d;
+}
+
+.userQuestion {
+  margin-top: 10px;
 }
