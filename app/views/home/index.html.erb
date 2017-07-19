@@ -1,9 +1,12 @@
 <div class="well">
-    <h1>A place to ask any Pilates related questions!</h1>
-    <h4>This Q&amp;A site is dedicated to questions about Pilates</h4>
+  <div class="pilatesHeading">
+      <h1>A place to ask any Pilates related questions!</h1>
+      <h4>This Q&amp;A site is dedicated to questions about Pilates</h4>
+  </div>
 </div>
 
 <div class="container">
+  <div class="boxes">
   <% @questions.each do |q| %>
     <div class="media">
       <div class="media-left">
@@ -13,12 +16,13 @@
       </div>
       <div class="media-body">
         <h4 class="media-heading"><%= q.email %> asked:</h4>
-        <div><%= time_ago_in_words q.created_at %> ago</div>
-        <div><%= q.body %></div>
+        <div class="time"><%= time_ago_in_words q.created_at %> ago</div>
+        <div class="questionContent"><%= q.body %></div>
         <div><a href="<%= question_path(q) %>" class="btn btn-success btn-xs">View Answers</a></div>
       </div>
     </div>
   <% end %>
+</div>
 
   <% if @questions.empty? %>
   <div class="alert alter-info">Be the first to ask a question!</div> 
