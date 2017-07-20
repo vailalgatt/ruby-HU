@@ -51,6 +51,7 @@
         color: white;
         background-color: #28655D;
         font-weight: bold;
+        border-radius: 20px;
         font-family: 'Raleway', sans-serif;
     }
     .btn:hover{
@@ -62,6 +63,10 @@
     .media-object{
         border-radius: 50px;
         border: white 5px solid;
+    }
+    .media:hover{
+        cursor: pointer;
+        background-color: #afdbd5;
     }
 }
 
