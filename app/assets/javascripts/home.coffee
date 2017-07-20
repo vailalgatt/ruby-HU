@@ -4,7 +4,12 @@
 
 
 ready = ->
-    console.log("test")
+  $(".media").on "click", ->
+    document.location = $(this).data("target")
+    return false
+
+  $(".modal").on "shown.bs.modal", ->
+    $(this).find("textarea").focus()
 
 $(document).ready(ready)
 $(document).on "page:load", ready
